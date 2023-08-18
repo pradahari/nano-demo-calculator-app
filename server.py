@@ -18,6 +18,7 @@ def add():
 def subtract():
     if request.method == "POST":
        first_name = int(request.form.get("first"))
+       
        last_name = int(request.form.get("second"))
        return jsonify({"request": first_name - last_name})
 
