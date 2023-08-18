@@ -10,16 +10,16 @@ def greeting():
 @app.route("/calculator/add", methods=['POST'])
 def add():
     if request.method == "POST":
-       first_name = int(request.form.get("first"))
-       last_name = int(request.form.get("second"))
+       first_name = (request.form.get("first"))
+       last_name = (request.form.get("second"))
        return jsonify({"request": first_name + last_name})
 
 @app.route("/calculator/subtract", methods=['POST'])
 def subtract():
     if request.method == "POST":
-       first_name = int(request.form.get("first"))
-       
-       last_name = int(request.form.get("second"))
+       first_name = (request.form.get("first"))
+
+       last_name = (request.form.get("second"))
        return jsonify({"request": first_name - last_name})
 
 if __name__ == '__main__':
